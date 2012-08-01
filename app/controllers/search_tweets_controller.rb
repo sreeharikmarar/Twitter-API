@@ -3,7 +3,7 @@ class SearchTweetsController < ApplicationController
 
 	def search
        	 
- user = params["username"].to_s
+ 	user = params["username"].to_s
 
 
 	response =  RestClient.get("https://twitter.com/statuses/user_timeline/"+user+".json")
@@ -13,6 +13,7 @@ class SearchTweetsController < ApplicationController
         @hashOfResponse = JSON.parse(@generated_json)
 
         @tweets = []
+
             @hashOfResponse.each { |trend|
                     @tweets << trend['text']
             }
