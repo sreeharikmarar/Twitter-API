@@ -1,73 +1,21 @@
+<div class='span10'">
+
 <div id="AttributeList" style="float: left;width:900px;">
 
 
+<div style="margin-left:40px;">
 <%= form_tag(search_path,:method => 'post') %>
 
 
  
 
-Username : 
-<%= text_field_tag(:username) %>
+<h3> Enter Your Twitter Handle : @   
+<%= text_field_tag (:username) %></h3>
 
  
-<%= submit_tag nil, :class => "form_submit"%>
+<%= submit_tag 'Generate Cloud', :class => "btn btn-large btn-danger" , :style=>"margin-left:300px" %>
 
-
-<!--
-<%
-path = "https://api.github.com/users/sreeharikmarar/repo"
-%>
-
-
-<script type="text/javascript">
-  jQuery(document).ready(function(){
-          jQuery("#form_submit").click(function(){
-            var text = jQuery("#text_box").val();
-            var value = text.toString();
-            jQuery.ajax({
-              type: "GET",
-              url: "https://twitter.com/statuses/user_timeline/"+value+".json",
-              dataType : "jsonp",
-              success: function(response){
-                var j = response;
-           
-           
-                console.log(j[1].text);
-                console.log(j);
-
-                for(a = 0 ; a <= j.length; a++ ) {
-                  var contents = '<h4>' + j[a].text + '</h4>'
-                   
-                  
-                 
-                jQuery("#AttributeList").append(contents);
-                }
-              }
-            });
-          });
-  });
-  </script>
-
-
-
-
-Tweets search :<input type="text" id="text_box"></input>
-<%= button_tag "click",:id=>"form_submit" %><br/>
-
-<br/>
-<br/>
-<br/>
-
-<div id="AttributeList"></div>
-
-
-<div id="image" style="float: left;width:900px;">
 </div>
-
-  
 </div>
-
--->
-
 
 

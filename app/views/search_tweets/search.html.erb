@@ -2,9 +2,36 @@
 <div>
 
 
-<% @count.each do |tcount| %>
+<!-- <% @count.each do |tcount| %>
                      tweets_count  : <%= tcount %> <br/>
         
-<% end %>
+<% end %> -->
 
 </div>
+
+<div class='span8' style="
+float: left;
+background: white;
+height: 500%;
+width: 92%;
+border-radius: 10px 10px 10px 10px;">
+<!-- <ul id="xdef" class="xmpl" style="width: 698px; position: static; height: 100px; "> -->
+
+<% @count.each do |tcount| %>
+
+<div value="<% tcount[1] %>" title="#{tcount} "><%= tcount[0] %></div>
+<div style="float:left"></div>
+<% end %>
+
+<!-- </ul> -->
+<div style="float:left"></div>
+</div>
+<script type="text/javascript">
+
+
+$(document).ready(function() { 
+ $("#xlist").tagcloud({type:"list",sizemin:8}).find("li").tsort();
+  
+     
+}); 
+</script>
