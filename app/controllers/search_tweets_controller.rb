@@ -15,7 +15,7 @@ class SearchTweetsController < ApplicationController
         @tweets_count = []
 
             @hashOfResponse.each { |trend|
-                    @tweets_count << trend['text'].split.uniq.size
+                    @tweets_count << trend['text'].split.size
             }
 
 	
