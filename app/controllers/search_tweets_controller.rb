@@ -27,7 +27,19 @@ class SearchTweetsController < ApplicationController
 	end
 
 	@count = @actual_count.sort_by {|key,value| value }
-	puts " ----------- #{@count}"
+  @list = []
+  @hash = Hash.new(0)
+
+  @tweets_count
+  @a = []
+  @actual_count.each do |s|
+    @a << Hash["text" => s[0], "weight" => s[1]]
+ end
+
+  puts "%"*100
+	puts " ----------- #{@a}"
+  puts "%"*100
+    
 		respond_to do |format|
           	    format.html {} 
     		end  
