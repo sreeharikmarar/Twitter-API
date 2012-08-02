@@ -1,21 +1,23 @@
 <h1>Tweets Cloud </h1>
 
 
-<div class='span8' style='float: left;background: white;min-height: 500px;width: 90%;border-radius: 10px 10px 10px 10px;'>
+<div class='span12' style='float: left;background: white;min-height: 500px;width: 100%;border-radius: 10px 10px 10px 10px;'>
 
 <div style="clear: both; display: block; height: 30px;"></div>
 
 
-
-    
-    
 
 <div id="my_favorite" style="width: 90%; height: 450px; border: 1px solid #ccc;margin-left: 30px;"></div>
 
-<div style="clear: both; display: block; height: 30px;"></div>
+<br/>
+<div class="cloud">
+<ul id="xpower" class="xmpl" >
 
-
-
+<% @actual_count.each do |s| %>
+  <li value="<%= s[1] %>"><%= s[0] %></li>
+<% end %>
+</ul>
+</div>
 
 <div style="clear: both; display: block; height: 20px;"></div>
 </div>
@@ -23,10 +25,15 @@
 
 
  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.js"></script>
- <link rel="stylesheet" type="text/css" href="/assets/jqcloud.css" />
+ <link rel="stylesheet" type="text/css" href="assets/jqcloud.css" />
+ <link rel="stylesheet" type="text/css" href="assets/other.css" />
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.js"></script>
-    <script type="text/javascript" src="/assets/jqcloud.js"></script>
+    <script type="text/javascript" src="assets/jqcloud.min.js"></script>
+    <script type="text/javascript" src="assets/jQuery.min.js"></script>
+    <script type="text/javascript" src="assets/jQuery.tagcloud.min.js"></script>
+    <script type="text/javascript" src="assets/jQuery.tinysort.min.js"></script>
 
+    
 
     <script type="text/javascript">
       var list = <%= raw(@hash) %>;
@@ -39,5 +46,11 @@
 
     </script>
 
-    
-   <!-- $("#my_favorite").jQCloud(list1, {shape: "rectangular"}); -->
+
+    <script type="text/javascript">
+      $(function(){
+      console.log("binding tag cloud");
+      $('#xpower').tagcloud({type:'sphere',height:500,sizemin:12,sizemax:100,power:.6,colormin:"f81908",colormax:"2f29ff"});
+      });
+    </script>
+   <!-- $("#my_favorite").jQCloud(l<ist1, {shape: "rectangular"}); -->
