@@ -32,13 +32,20 @@ class SearchTweetsController < ApplicationController
 
   @tweets_count
   @a = []
+  
   @actual_count.each do |s|
-    @a << Hash["text" => s[0], "weight" => s[1]]
+    @a << Hash[:text => "#{s[0]}" , :weight => s[1]]
  end
 
+ @hash = @a.to_json
+  
+  puts "%"*100
+	puts " ----------- #{@hash}"
+  puts "%"*100
   puts "%"*100
 	puts " ----------- #{@a}"
   puts "%"*100
+
     
 		respond_to do |format|
           	    format.html {} 
