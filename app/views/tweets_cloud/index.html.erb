@@ -1,0 +1,32 @@
+<div class='span10'">
+
+<div id="AttributeList" style="float: left;width:900px;">
+
+
+<div style="margin-left:40px;">
+<%= form_tag(tweets_cloud_path,:method => 'post' ,:style=>"margin-top:0px;" , :onSubmit=>"return validateSearch();") %>
+
+<h3> Enter Your Twitter Handle : @  
+
+<%= text_field_tag("TXT_SEARCH", "" , :name=>"username", :autocomplete=>"off" ) %>
+ 
+<%= submit_tag 'Generate Cloud', :class => "btn btn-large btn-danger" , :style=>"margin-left:300px" %>
+
+</div>
+</div>
+
+<script type="text/javascript" src="assets/jQuery.min.js"></script>
+<script type="text/javascript">
+
+ function validateSearch()
+  {
+    query = jQuery("#TXT_SEARCH").val();
+    if(query == ""){
+      return false;
+    }
+    return true;
+  }
+  
+</script>
+
+

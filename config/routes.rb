@@ -49,9 +49,9 @@ TwitterApp::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-   root :to => 'index#index'
+   root :to => 'tweets_cloud#index'
 
-   match "/search_tweets"                          =>   "search_tweets#search",                     :method=>:get,   :as => :search
+   match "/cloud"                          =>   "tweets_cloud#cloud_tag",                     :method=>:get,   :as => :tweets_cloud
 
   # See how all your routes lay out with "rake routes"
 

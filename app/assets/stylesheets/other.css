@@ -45,13 +45,13 @@ margin-top: -0px;
     line-height: 30px;
 }
 
-.question {
+.heading {
    margin-top: -30px;
     margin-left: 28%;font-size: 2em;
     height: 2%;
     z-index: 9999999;
     position: absolute;
-    color: white;"
+    color: white;
 }
 
 .anti-fineprint {
