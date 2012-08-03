@@ -6,8 +6,14 @@ class SearchTweetsController < ApplicationController
  	user = params["username"].to_s
 
 
-	#response =  RestClient.get("https://twitter.com/statuses/user_timeline/"+user+".json")
-	response =  RestClient.get("http://api.twitter.com/1/statuses/user_timeline.json?id="+user+"&count=200&page=1")
+	#response =  RestClient.get("https://twitter.com/statuses/user_timeline/"+user+".json")[
+	response =  RestClient.get("http://api.twitter.com/1/statuses/user_timeline.json?id="+user+"&count=200&page=1"){|response, request, result| response }
+  puts "&"*100
+  puts "RESPONSE CODE : #{response.code}"
+  puts "&"*100
+  puts "RESPONSE TO STRING : #{response.to_str}"
+  puts "&"*100
+  puts "RESPONSE HEADERS : #{response.headers}"
         @generated_json = response.body
 
 
