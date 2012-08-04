@@ -5,6 +5,168 @@
   background-size:100%;
 }*/
 
+.cl     { clear: both; display: block; height: 0;    }
+.cl-3   { clear: both; display: block; height: 3px;  }
+.cl-4   { clear: both; display: block; height: 4px;  }
+.cl-5   { clear: both; display: block; height: 5px;  }
+.cl-10  { clear: both; display: block; height: 10px; }
+.cl-15  { clear: both; display: block; height: 15px; }
+.cl-20  { clear: both; display: block; height: 20px; }
+.cl-30  { clear: both; display: block; height: 30px; }
+
+
+/* Margin Classes */
+
+.margin-auto {margin:0px auto;}
+.margin-5{margin:5px;}
+.margin-10{margin:10px;}
+.margin-15{margin:15px;}
+.margin-20{margin:20px;}
+.margin-25{margin:25px;}
+.margin-30{margin:30px;}
+.margin-40{margin:40px;}
+.margin-50{margin:50px;}
+.margin-60{margin:60px;}
+.margin-70{margin:70px;}
+.margin-80{margin:80px;}
+.margin-90{margin:90px;}
+.margin-100{margin:100px;}
+
+.margin-top-3 {margin-top:3px;}
+.margin-top-5 {margin-top:5px;}
+.margin-top-10{margin-top:10px;}
+.margin-top-15{margin-top:15px;}
+.margin-top-20{margin-top:20px;}
+.margin-top-25{margin-top:25px;}
+.margin-top-30{margin-top:30px;}
+.margin-top-40{margin-top:40px;}
+.margin-top-50{margin-top:50px;}
+.margin-top-60{margin-top:60px;}
+.margin-top-70{margin-top:70px;}
+.margin-top-80{margin-top:80px;}
+.margin-top-90{margin-top:90px;}
+.margin-top-100{margin-top:100px;}
+
+.margin-bottom-5{margin-bottom:5px;}
+.margin-bottom-10{margin-bottom:10px;}
+.margin-bottom-15{margin-bottom:15px;}
+.margin-bottom-20{margin-bottom:20px;}
+.margin-bottom-25{margin-bottom:25px;}
+.margin-bottom-30{margin-bottom:30px;}
+.margin-bottom-40{margin-bottom:40px;}
+.margin-bottom-50{margin-bottom:50px;}
+.margin-bottom-60{margin-bottom:60px;}
+.margin-bottom-70{margin-bottom:70px;}
+.margin-bottom-80{margin-bottom:80px;}
+.margin-bottom-90{margin-bottom:90px;}
+.margin-bottom-100{margin-bottom:100px;}
+
+.margin-left-5{margin-left:5px;}
+.margin-left-10{margin-left:10px;}
+.margin-left-15{margin-left:15px;}
+.margin-left-20{margin-left:20px;}
+.margin-left-25{margin-left:25px;}
+.margin-left-30{margin-left:30px;}
+.margin-left-40{margin-left:40px;}
+.margin-left-45{margin-left:45px;}
+.margin-left-50{margin-left:50px;}
+.margin-left-55{margin-left:55px;}
+.margin-left-60{margin-left:60px;}
+.margin-left-70{margin-left:70px;}
+.margin-left-80{margin-left:80px;}
+.margin-left-90{margin-left:90px;}
+.margin-left-100{margin-left:100px;}
+
+.mrgin-right-5{margin-right:5px;}
+.mrgin-right-10{margin-right:10px;}
+.mrgin-right-15{margin-right:15px;}
+.mrgin-right-20{margin-right:20px;}
+.mrgin-right-25{margin-right:25px;}
+.mrgin-right-28{margin-right:28px;}
+.mrgin-right-30{margin-right:30px;}
+.mrgin-right-35{margin-right:35px;}
+.mrgin-right-40{margin-right:40px;}
+.mrgin-right-50{margin-right:50px;}
+.mrgin-right-60{margin-right:60px;}
+.mrgin-right-70{margin-right:70px;}
+.mrgin-right-80{margin-right:80px;}
+.mrgin-right-90{margin-right:90px;}
+.mrgin-right-100{margin-right:100px;}
+
+/* Padding Classes */
+
+.padding-3{padding:3px;}
+.padding-5{padding:5px;}
+.padding-10{padding:10px;}
+.padding-15{padding:15px;}
+.padding-20{padding:20px;}
+.padding-30{padding:30px;}
+.padding-40{padding:40px;}
+.padding-50{padding:50px;}
+.padding-60{padding:60px;}
+.padding-70{padding:70px;}
+.padding-80{padding:80px;}
+.padding-90{padding:90px;}
+.padding-100{padding:100px;}
+
+.padding-top-5 {padding-top:5px;}
+.padding-top-10{padding-top:10px;}
+.padding-top-15{padding-top:15px;}
+.padding-top-20{padding-top:20px;}
+.padding-top-30{padding-top:30px;}
+.padding-top-40{padding-top:40px;}
+.padding-top-50{padding-top:50px;}
+.padding-top-60{padding-top:60px;}
+.padding-top-70{padding-top:70px;}
+.padding-top-80{padding-top:80px;}
+.padding-top-90{padding-top:90px;}
+.padding-top-100{padding-top:100px;}
+
+.padding-bottom-5{padding-bottom:5px;}
+.padding-bottom-10{padding-bottom:10px;}
+.padding-bottom-15{padding-bottom:15px;}
+.padding-bottom-20{padding-bottom:20px;}
+.padding-bottom-30{padding-bottom:30px;}
+.padding-bottom-40{padding-bottom:40px;}
+.padding-bottom-50{padding-bottom:50px;}
+.padding-bottom-60{padding-bottom:60px;}
+.padding-bottom-70{padding-bottom:70px;}
+.padding-bottom-80{padding-bottom:80px;}
+.padding-bottom-90{padding-bottom:90px;}
+.padding-bottom-100{padding-bottom:100px;}
+
+.padding-left-5{padding-left:5px;}
+.padding-left-10{padding-left:10px;}
+.padding-left-15{padding-left:15px;}
+.padding-left-20{padding-left:20px;}
+.padding-left-30{padding-left:30px;}
+.padding-left-40{padding-left:40px;}
+.padding-left-50{padding-left:50px;}
+.padding-left-60{padding-left:60px;}
+.padding-left-70{padding-left:70px;}
+.padding-left-80{padding-left:80px;}
+.padding-left-90{padding-left:90px;}
+.padding-left-100{padding-left:100px;}
+
+.padding-right-5{padding-right:5px;}
+.padding-right-10{padding-right:10px;}
+.padding-right-15{padding-right:15px;}
+.padding-right-20{padding-right:20px;}
+.padding-right-30{padding-right:30px;}
+.padding-right-40{padding-right:40px;}
+.padding-right-50{padding-right:50px;}
+.padding-right-60{padding-right:60px;}
+.padding-right-70{padding-right:70px;}
+.padding-right-80{padding-right:80px;}
+.padding-right-90{padding-right:90px;}
+.padding-right-100{padding-right:100px;}
+
+/* Float Classes */
+
+.float-left{float:left;}
+.float-right{float:right;}
+
+
 .cloud{
 margin-top: -0px;
 }
@@ -12,6 +174,8 @@ margin-top: -0px;
 .xmpl {
     list-style: square;
     margin: 16px 0px;
+    background-color: rgba(248, 248, 248, 0.5);
+    color: rgba(248, 248, 248, 0.5);
     padding: 10px 15px 10px 15px !important;
     width:auto;
     -webkit-border-radius:50px;
@@ -29,8 +193,8 @@ margin-top: -0px;
     font-size: 1.2em;
 }
 
-.instructions{
-    background-color: rgba(248, 248, 248, 0.9); !important;
+.description{
+    background-color: rgba(248, 248, 248, 0.9); 
     color: rgba(248, 248, 248, 0.5);
     width:auto;
     -webkit-border-radius:50px;
@@ -38,13 +202,12 @@ margin-top: -0px;
 
     padding: 2em;
     color: #7B2B8B;
-    font-size: 1.2em;
-}
-
-.instructions li {
+    font-size: 1.6em;
     line-height: 30px;
 }
-
+.description h4{
+   font-size: 1.5em;
+}
 .heading {
    margin-top: -30px;
     margin-left: 28%;font-size: 2em;
@@ -61,3 +224,16 @@ margin-top: -0px;
 
 /*    background-color: rgba(248, 248, 248, 0.5);
     color: rgba(248, 248, 248, 0.5);*/
+
+.heading_2 {
+   margin-top: 10px;
+    margin-left: 8%;
+    font-size: 5em;
+    font-family:areal;
+    font-weight: bold;
+    height: 3%;
+    z-index: 9999999;
+    position: absolute;
+    color: white;
+    text-shadow: 8px 8px 20px #C1C1C1;
+}
