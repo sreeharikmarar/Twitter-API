@@ -1,17 +1,32 @@
-<div class='span10'">
+<div class="row-fluid">
 
-<div id="AttributeList" style="float: left;width:900px;">
+  <div class="span6">
+    
+  <h1>Twitter Puzzle</h1>
+</div>
+  
+  <div class="span6">
+    
+  </div>
+</div>
+
+<div class='row-fluid'>
+  <div class="span12" style="margin-left: 300px">
 
 
 <div style="margin-left:40px;">
-<%= form_tag(tweets_cloud_path,:method => 'post' ,:style=>"margin-top:0px;" , :onSubmit=>"return validateSearch();") %>
+<%= form_tag(tweets_cloud_path,:method => 'post' ,:style=>"margin-top:0px;" , :class=>"form-horizontal" ,:onSubmit=>"return validateSearch();") %>
 
-<h3> Enter Your Twitter Handle : @  
+<label class="control-label" for="input01" style="width: 250px;padding-right: 15px;font-family: verdana;font-size: 18px;font-weight: bold;color: white;">Enter Your Twitter Handle : @  </label>
 
-<%= text_field_tag("TXT_SEARCH", "" , :name=>"username", :autocomplete=>"off" ) %>
- 
-<%= submit_tag 'Generate Cloud', :class => "btn btn-large btn-danger" , :style=>"margin-left:300px" %>
+<%= text_field_tag("TXT_SEARCH", "" , :name=>"username", :autocomplete=>"off" ,:style=>"height: 35px;font-size: 1.1em;") %>
+ <br/><br/>
+<%= submit_tag 'Generate Cloud', :class => "btn btn-large btn-danger" , :style=>"margin-left:300px;padding: 15px 30px;" %>
 
+</div>
+    <% if @response_text %>
+    <h4><%= @response_text %></h4>
+    <% end %>
 </div>
 </div>
 
