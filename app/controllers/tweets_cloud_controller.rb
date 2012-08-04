@@ -2,7 +2,7 @@ class TweetsCloudController < ApplicationController
   
     
 	def index
-    @back_ground_url = 'assets/original2.jpg'
+    @back_ground_url = 'assets/home_cloud.jpg'
     @response_text = params[:response_text]
     respond_to do |format|
       format.html {}
@@ -12,12 +12,12 @@ class TweetsCloudController < ApplicationController
 
 	def cloud_tag
 	
-    @back_ground_url = 'assets/cloud5.jpg'
+    @back_ground_url = 'assets/original2.jpg'
     
     user = params["username"].to_s
 
 
-    response =  RestClient.get("http://api.twitter.com/1/statuses/user_timeline.json?id="+user+"&count=1000&page=1"){|response, request, result| response }
+    response =  RestClient.get("http://api.twitter.com/1/statuses/user_timeline.json?id="+user+"&count=200&include_rts=true&exclude_replies=true&page=1"){|response, request, result| response }
 
 
     if response.code == 200
@@ -26,7 +26,7 @@ class TweetsCloudController < ApplicationController
       
       @hashOfResponse = JSON.parse(@generated_json)
 
-      @name = @hashOfResponse[0]['user']['screen_name'] if @hashOfResponse[0]['user']['screen_name']
+      @name = @hashOfResponse[0]['user']['name'] if @hashOfResponse[0]['user']['name']
       
       @tweets_count = []
       
