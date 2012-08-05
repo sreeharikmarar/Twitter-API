@@ -16,4 +16,6 @@
 //= require jquery_ujs
 //= require twitter/bootstrap
 //= require jquery_tagcloud
+//= require jQuery.tinysort.min
+//= require jQuery.tagcloud.min
 //= require_tree .

@@ -10,6 +10,7 @@
  *
  *
  *= require jqcloud
+ *= require other
  *= require_self
  *= require_tree .
 */
