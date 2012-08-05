@@ -25,30 +25,38 @@ class TweetsCloudController < ApplicationController
 
       
       @hashOfResponse = JSON.parse(@generated_json)
-
+	
+	
+      if @hashOfResponse.any?
       @name = @hashOfResponse[0]['user']['name'] if @hashOfResponse[0]['user']['name']
-      
+      end
+
       @tweets_count = []
       
       @hashOfResponse.each { |res|
-        @tweets_count << res['text'].split.size
+        @tweets_count << res['text'].split.size if res['text']
       }
 
 
       # iterate over the array, counting duplicate entries
+
       @actual_count = Hash.new(0)
 
-      
-      @tweets_count.each do |v|
-        @actual_count[v] += 1
+      if @tweets_count.any?
+      	@tweets_count.each do |v|
+        	@actual_count[v] += 1
+      	end
+	@count = @actual_count.sort_by {|key,value| value }.reverse
+	respond_to do |format|
+        	format.html {}
+      	end
+      else
+	@response_text  =  " Sorry! No tweets Found"
+        respond_to do |format|
+        	format.html {redirect_to root_path(:response_text=>@response_text)}
+      	end
       end
-
-      @count = @actual_count.sort_by {|key,value| value }.reverse
-      
-      respond_to do |format|
-        format.html {}
-      end
-      
+          
     elsif response.code == 404
       @response_text  =  " Sorry! That Page Does not Found"
       respond_to do |format|
