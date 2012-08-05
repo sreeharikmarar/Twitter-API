@@ -2,7 +2,7 @@ class TweetsCloudController < ApplicationController
   
     
 	def index
-    @back_ground_url = 'assets/home_cloud.jpg'
+    @back_ground_url = 'assets/cloud.jpg'
     @response_text = params[:response_text]
     respond_to do |format|
       format.html {}
@@ -12,7 +12,7 @@ class TweetsCloudController < ApplicationController
 
 	def cloud_tag
 	
-    @back_ground_url = 'assets/original2.jpg'
+    @back_ground_url = 'assets/tag_cloud.jpg'
     
     user = params["username"].to_s
 
